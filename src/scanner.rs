@@ -1240,7 +1240,7 @@ impl<T: Iterator<Item = char>> Scanner<T> {
             }
 
             // Check for a tab character messing the indentation.
-            if (*indent == 0 || self.mark.col < *indent) && self.buffer[0] == '\t' {
+            if self.mark.col < *indent && self.buffer[0] == '\t' {
                 return Err(ScanError::new(self.mark,
                         "while scanning a block scalar, found a tab character where an indentation space is expected"));
             }

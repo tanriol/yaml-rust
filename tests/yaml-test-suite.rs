@@ -307,11 +307,6 @@ static EXPECTED_FAILURES: &[&str] = &[
     "P76L", // overriding the `!!` namespace!
 
     // These seem to be plain bugs
-    // Leading TAB in literal scalars
-    "96NN-00",
-    "96NN-01",
-    "R4YG",
-    "Y79Y-01",
     // TAB as start of plain scalar instead of whitespace
     "6BCT",
     "6CA3",
