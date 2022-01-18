@@ -1259,9 +1259,6 @@ impl<T: Iterator<Item = char>> Scanner<T> {
             if *indent < (self.indent + 1) as usize {
                 *indent = (self.indent + 1) as usize;
             }
-            if *indent < 1 {
-                *indent = 1;
-            }
         }
         Ok(())
     }
