@@ -1357,6 +1357,7 @@ impl<T: Iterator<Item = char>> Scanner<T> {
                             '"' => string.push('"'),
                             '\'' => string.push('\''),
                             '\\' => string.push('\\'),
+                            '/' => string.push('/'),
                             // NEL (#x85)
                             'N' => string.push(char::from_u32(0x85).unwrap()),
                             // #xA0
